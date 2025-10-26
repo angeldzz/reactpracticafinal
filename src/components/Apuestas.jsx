@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Global from '../Global'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 export default class Apuestas extends Component {
   url = Global.apiApuestas
   state = {
@@ -19,8 +20,9 @@ export default class Apuestas extends Component {
   }
   render() {
     return (
-      <div>
-        <table className='table table-striped'>
+      <div className='d-flex flex-column justify-content-center align-items-center'>
+        <NavLink to="/crearapuesta" className='btn btn-danger'>Realizar Apuesta</NavLink>
+        <table className='table table-striped table-light'>
           <thead>
             <tr>
               <th>Usuario</th>
